@@ -321,7 +321,7 @@ class MinQueue_Admin {
 
 		$current_screen = get_current_screen();
 
-		if ( isset( $this->options['helper'] ) && $this->options['helper'] === true )
+		if ( isset( $this->options['helper'] ) && $this->options['helper'] === true && !apply_filters('minqueue_disable_helper_notice', false))
 			$this->admin_notices->add_notice( 'MinQueue helper is currently active', true );
 
 
